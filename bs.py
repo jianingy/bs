@@ -35,8 +35,8 @@ bs_opts = [
 
 
 CONF = cfg.CONF
+CONF.register_cli_opts(bs_opts)
 CONF(sys.argv[1:], project='bs', version=__version__)
-CONF.register_opts(bs_opts)
 
 project_map = {
     'n': 'nova',
